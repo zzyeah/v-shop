@@ -24,13 +24,13 @@ export default function ({
   });
   document.body.appendChild(app.$el);
   setTimeout(() => {
-    app.moveX = endX,
-    app.moveY = endY,
-    app.sx = 0.1,
-    app.sy = 0.1,
+    app.moveX = endX;
+    app.moveY = endY;
+    app.sx = 0.1;
+    app.sy = 0.1;
     app.opacity = 0;
   }, 0);
   setTimeout(() => {
     app.exist = false;
-  }, 1100);
+  }, 1000);
 }

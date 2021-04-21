@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition :name="transitionName" :mode="this.$router.back ? 'out-in' : 'in-out'">
+    <transition :name="transitionName" :mode="$router.back ? 'out-in' : 'in-out'">
       <router-view class="view"></router-view>
     </transition>
   </div>

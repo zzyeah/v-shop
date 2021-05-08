@@ -8,7 +8,7 @@
     <!-- <template v-if="showContent"> -->
       <div class="classify-content" v-if="show">
         <side-bar></side-bar>
-      <goods-list></goods-list>
+        <goods-list></goods-list>
       </div>
     <!-- </template> -->
     <van-loading size="2rem" vertical v-else />

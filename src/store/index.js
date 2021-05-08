@@ -20,7 +20,6 @@ export default new Vuex.Store({
       state.buytoomuch = false;
       if (state.counterMap[id]) {
         if ((value === -1 && state.counterMap[id] === 1) || value === -Infinity) {
-          console.log(state.counterMap);
           Vue.delete(state.counterMap, id);
         } else if (state.counterMap[id] >= inventory) {
           Vue.set(state.counterMap, id, inventory);

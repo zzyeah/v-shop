@@ -14,20 +14,10 @@ function moveTo(start, end, dom, prop) {
   }
   const t = setInterval(() => {
     dis += speed;
-    // Object.defineProperty(dom, prop, {
-    //   value: start + dis,
-    //   writable: true,
-    //   configurable: true,
-    // });
     dom[prop] = start + dis;
     // 运动距离比最终值大
 
     if (Math.abs(dis) >= Math.abs(end)) {
-      // Object.defineProperty(dom, prop, {
-      //   value: start - end,
-      //   writable: true,
-      //   configurable: true,
-      // });
       dom[prop] = start + end;
       clearInterval(t);
     }

@@ -72,7 +72,6 @@ export default {
       // 重新加载，将所有属性初始化
       this.isLoading = true;
       this.finished = false;
-      this.isLoading = false;
       this.page = 1;
       this.resetGoodsList();
       // 这里的this.type是拿不到的，需要去store处理

@@ -5,12 +5,10 @@
       <div>苹果特价1元1斤</div>
     </router-link>
    <one-tab @handlerChange="getSide"></one-tab>
-    <!-- <template v-if="showContent"> -->
       <div class="classify-content" v-if="show">
         <side-bar></side-bar>
         <goods-list></goods-list>
       </div>
-    <!-- </template> -->
     <van-loading size="2rem" vertical v-else />
   </div>
 </template>
@@ -58,13 +56,6 @@ export default {
     goodsList,
   },
   watch: {
-    // showContent() {
-    //   if (this.showContent) {
-    //     console.log(this.goodsList);
-    //     this.resetGoodsList();
-    //     this.getGoodsList({ type: this.sideList[0], page: 1, sortType: 'all' });
-    //   }
-    // },
   },
 };
 </script>

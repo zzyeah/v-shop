@@ -5,6 +5,10 @@ import Classify from '../views/Classify.vue';
 import Shopping from '../views/Shopping.vue';
 import My from '../views/Mine.vue';
 import Search from '../views/Search.vue';
+import Login from '../views/Login.vue';
+import History from '../views/History.vue';
+import Address from '../views/Address.vue';
+import AddressEdit from '../views/AddressEdit.vue';
 
 VueRouter.prototype.back = false;
 VueRouter.prototype.goBack = function goBack() {
@@ -14,6 +18,21 @@ VueRouter.prototype.goBack = function goBack() {
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: '/login',
+    name: 'login',
+    component: Login,
+  },
+  {
+    path: '/address',
+    name: 'address',
+    component: Address,
+  },
+  {
+    path: '/addressedit',
+    name: 'address-edit',
+    component: AddressEdit,
+  },
   {
     path: '/home',
     component: Home,
@@ -32,6 +51,11 @@ const routes = [
         path: 'my',
         name: 'my',
         component: My,
+      },
+      {
+        path: 'history',
+        name: 'history',
+        component: History,
       },
     ],
   },

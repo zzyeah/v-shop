@@ -1,7 +1,7 @@
 <template>
   <div class="my-models-container">
     <div class="model">
-      <router-link class="address" to="/address">
+      <router-link class="address" :to="{name: 'address'}">
         <div class="ordering">
           <van-cell title="地址管理" />
           <van-icon name="arrow" size=".5rem" class="arrow" />
@@ -10,7 +10,7 @@
     </div>
     <div class="func-model">
       <div class="model">
-        <router-link class="history" to="/history">
+        <router-link class="history" :to="{name: 'history'}">
           <div class="ordering">
             <van-cell title="历史记录" />
             <van-icon name="arrow" size=".5rem" class="arrow" />
@@ -40,4 +40,5 @@ export default {};
     }
   }
 }
+
 </style>

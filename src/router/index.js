@@ -29,7 +29,7 @@ const routes = [
     component: Address,
   },
   {
-    path: '/addressedit',
+    path: '/addressedit/:addressId',
     name: 'address-edit',
     component: AddressEdit,
   },

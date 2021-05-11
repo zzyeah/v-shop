@@ -24,6 +24,9 @@ export default {
       if (to.name === 'classify' && from.name === 'search') {
         this.$router.back = true;
       }
+      if (to.name === 'my' && from.name === 'address') {
+        this.$router.back = true;
+      }
       if (this.$router.back) {
         this.transitionName = 'right';
       } else {

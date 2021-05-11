@@ -47,7 +47,11 @@ export default {
 <style lang="less" scoped>
 .mine-container {
   position: relative;
+  z-index: 0;
+  height: 90vh;
+  background: #fff;
   .user {
+    z-index: 10;
     display: flex;
     justify-content: start;
     box-sizing: border-box;

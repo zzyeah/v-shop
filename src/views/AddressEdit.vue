@@ -61,9 +61,6 @@ export default {
     position: fixed;
     top: 0;
     left: 0px;
-    z-index: 10;
-    .title{
-      z-index: 11;
-    }
+    z-index: 23;
 }
 </style>

@@ -1,9 +1,10 @@
 <template>
 <div class="address-container">
   <div class="address-head">
-    <van-nav-bar title="地址管理" left-arrow class="address-content" @click-left="onClickLeft"/>
+    <van-nav-bar title="地址管理" left-arrow class="address-head_title" @click-left="onClickLeft"/>
   </div>
   <van-address-list
+  class="address-content"
     v-model="chosenAddressId"
     :list="list"
     :disabled-list="disabledList"
@@ -51,9 +52,13 @@ export default {
     onAdd() {
       Toast('新增地址');
     },
-    onEdit() {
+    onEdit(item, index) {
+      console.log(item);
       this.$router.push({
         name: 'address-edit',
+        params: {
+          addressId: index,
+        },
       });
     },
     onClickLeft() {
@@ -65,17 +70,31 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.address-container{
+  position: relative;
+    z-index: 22;
+  background: #fff;
+  height: 100vh;
 .address-head{
   width: 100vw;
     background: #fff;
     margin: 0 auto;
     align-items: center;
-    position: fixed;
     top: 0;
     left: 0px;
-    z-index: 22;
-    .address-content{
+    .address-head_title{
       flex: 1;
     }
+    &::after{
+      content: '';
+      border-bottom: 1px solid;
+      display: block;
+    }
+}
+}
+</style>
+<style lang="less">
+.van-address-list__bottom{
+  z-index: 22!important;
 }
 </style>
